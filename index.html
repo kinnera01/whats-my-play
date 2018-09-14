@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
 
     <!-- jQuery library -->
@@ -196,8 +197,15 @@ body {
         font-weight: bold;
     }
 
-
+    @media (min-width: 991px) {
+        header.masthead{
+            min-height: 65rem;  
+        }
+}
     @media (max-width: 991px) {
+        header.masthead{
+            min-height: 65rem;  
+        }
         .masthead h1 {
             font-size: 4rem;
             line-height: 4rem;
@@ -216,7 +224,7 @@ body {
 }
     @media (max-width: 640px) {
         header.masthead{
-            min-height: 45rem;
+            min-height: 55rem;
         }
         .projects-section .featured-text {
             padding: 0 0 0 2rem;
@@ -527,64 +535,66 @@ margin-top:50px
 <body id="page-top">
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top mainmenu" role="navigation">
-            <div class="container-fluid">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                      <span class="icon-bar"></span>
-                  </button>
-                  <a class="brand" id="homeIcon" href="/"><img src="https://i.imgur.com/7reqADe.png"></a>
-              </div>
-  
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div id="navbarCollapse" class="collapse navbar-collapse">
-                  <ul class="nav navbar-nav dropdown" id="menu">
-  
-                          <li id="authorsindex"><a href="/Authors">Authors</a></li>
-                  </ul>
-  
-  
-                  <ul id="rightMenu" class="nav navbar-nav navbar-right">
-                                      <li id="logon"><a href="/Account/LogOn">LOGIN</a></li>
-                                      <li id="register"><a href="/Account/Register">SIGNUP</a></li>
-                   </ul>
-              </div><!-- /.navbar-collapse -->
-          </div><!-- /.container-fluid -->
-        </nav>
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" id="homeIcon" href="/"><img src="https://i.imgur.com/7reqADe.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="navbarCollapse" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav dropdown" id="menu">
+
+                    <li id="authorsindex"><a href="/Authors">Authors</a></li>
+                </ul>
+
+
+                <ul id="rightMenu" class="nav navbar-nav navbar-right">
+                    <li id="logon"><a href="/Account/LogOn">LOGIN</a></li>
+                    <li id="register"><a href="/Account/Register">SIGNUP</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
     <!-- Header -->
     <header class="masthead text-center">
-            <h2 class="text-center" style="color:#5e271b; vertical-align: middle">Baseball Knowledge and Coaching Platform.</h2>
-      <div class="container" >
-    
+        <h2 class="text-center" style="color:#5e271b; vertical-align: middle">Baseball Knowledge and Coaching Platform.</h2>
+        <div class="container">
+
             <div class="container" style="text-align:center;color:black;font-weight:250">
-        
-                 <a class="btn btn-lg btn-success text center"id="mastheadbtn"  href="/SampleTest" role="button">Sample Activity</a> 
+
+                <a class="btn btn-lg btn-success text center" id="mastheadbtn" href="/SampleTest" role="button">Sample
+                    Activity</a>
                 <!-- <button id="circle" href="/SampleTest" role="button">Sample Activity</button> -->
             </div>
- </div>
- <a class="ct-btn-scroll ct-js-btn-scroll" href="#about"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
+        </div>
+        <a class="ct-btn-scroll ct-js-btn-scroll" href="#about"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="about-section text-center">  
+    <section id="about" class="about-section text-center">
         <div class="container">
             <div class="col-xs-12 text-center">
-            
-                    <h2 class="text-black" id="play">Play. Evaluate. Compete.</h2>
-                    <p class="text-black-50"  style=" text-align: justify;"> What’s My Play is a one of a kind online, fun, dynamic, and interactive
-                        learning platform that allows Coaches, Players, and Organizations to track and assess their
-                        knowledge of live game situational play at any given point before, during or after a season. By
-                        providing organizations and teams the ability to create knowledge tests for players and
-                        coaches, they are better equipped to see and measure what their teams and players are learning.</p>
-                        
-                
+
+                <h2 class="text-black" id="play">Play. Evaluate. Compete.</h2>
+                <p class="text-black-50" style=" text-align: justify;"> What’s My Play is a one of a kind online, fun,
+                    dynamic, and interactive
+                    learning platform that allows Coaches, Players, and Organizations to track and assess their
+                    knowledge of live game situational play at any given point before, during or after a season. By
+                    providing organizations and teams the ability to create knowledge tests for players and
+                    coaches, they are better equipped to see and measure what their teams and players are learning.</p>
+
+
             </div>
             <!-- <img src="img/ipad.png" class="img-fluid" alt=""> -->
         </div>
-        
+
     </section>
 
     <!-- Projects Section -->
@@ -637,20 +647,22 @@ margin-top:50px
         </div>
     </section>
     <!-- Footer -->
-   <footer class="footer" style="background-color:#2a2730;">
-            <div class="container">
-                <ul class="footer-links">
-                    
-                    
-                    <li><a class="small" href="/About" target="_blank">ABOUT US</a></li>
-                    <li><a class="small" href="mailto:shawn@whatsmyplay.com" data-toggle="tooltip" data-placement="top" title="shawn@whatsmyplay.com">CONTACT US</a></li>
-                    <li class="small text-muted">© 2018 What's My Play LLC.</li>
-                    <li>
-                        <div class="fb-like" data-href="https://www.facebook.com/whatsmyplay" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-                    </li>
-                </ul>
-            </div>
-        </footer>
+    <footer class="footer" style="background-color:#2a2730;">
+        <div class="container">
+            <ul class="footer-links">
+
+
+                <li><a class="small" href="/About" target="_blank">ABOUT US</a></li>
+                <li><a class="small" href="mailto:shawn@whatsmyplay.com" data-toggle="tooltip" data-placement="top"
+                        title="shawn@whatsmyplay.com">CONTACT US</a></li>
+                <li class="small text-muted">© 2018 What's My Play LLC.</li>
+                <li>
+                    <div class="fb-like" data-href="https://www.facebook.com/whatsmyplay" data-layout="button_count"
+                        data-action="like" data-show-faces="true" data-share="true"></div>
+                </li>
+            </ul>
+        </div>
+    </footer>
     <!-- Footer -->
 
     <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
