@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,12 +15,63 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>Document</title>
 </head>
 <style>
+    /* Footer CSS */
+    html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 150px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  background-color: #f5f5f5;
+}
+
+.footer a {
+  color: #fff;
+}
+.footer-links {
+  padding-left: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.footer-links li {
+  display: inline-block;
+}
+.footer-links li + li {
+  margin-left: 15px;
+}
+/* Previous CSs */
+    .scrollable-menu {
+        height: auto;
+        max-height: 200px;
+        overflow-x: hidden;
+    }
+
+    ul.dropdown-menu.sub-menu {
+        min-height: 452px;
+    }
+
+    body {
+
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        z-index: 0;
+    }
+/* BS4 */
     #mainNav {
-        min-height: 56px;
+        max-height: 56px;
         background-color: #fff;
     }
 
@@ -116,15 +168,15 @@
     }
 
     header.masthead {
-         position: relative;
-        max-width: 100%;
-        height: auto;
-         min-height: 35rem;
+        position: relative;
+         max-width: 100%;
+         height: auto; 
+        min-height: 65rem;
         padding: 15rem 0; 
         text-align: center;
         color: #fff;
-        background: -webkit-gradient(linear, left top, left bottom, from(rgba(222,218,204, 0.1)), color-stop(75%, rgba(222,218,204,  0.5)), to(#ffebcd )), url("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw");
-        background: linear-gradient(to bottom, rgba(222,218,204,  0.1) 0%, rgba(222,218,204,  0.5) 75%, #FFEBED  100%),
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(222, 218, 204, 0.1)), color-stop(75%, rgba(222, 218, 204, 0.5)), to(#ffebcd)), url("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw");
+        background: linear-gradient(to bottom, rgba(222, 218, 204, 0.1) 0%, rgba(222, 218, 204, 0.5) 75%, #FFEBED 100%),
             url("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw");
         background-repeat: no-repeat;
         background-attachment: scroll;
@@ -132,10 +184,11 @@
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
-        background-size: cover
+        background-size: cover;
+       
     }
 
-    .masthead h1 {
+    /* .masthead h1 {
         font-family: 'Varela Round';
         font-size: 2.5rem;
         line-height: 2.5rem;
@@ -143,31 +196,39 @@
         background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
-    }
+    } */
+
 
     .masthead h2 {
         /* max-width: 20rem; */
-        font-size: 2rem;
+        padding: -8rem 0; 
+        font-size: 3.25rem;
         font-weight: bold;
     }
+
 
     @media (max-width: 991px) {
         .masthead h1 {
             font-size: 4rem;
             line-height: 4rem;
         }
+
         .projects-section .featured-text {
             padding: 0 0 0 2rem;
             border-left: 0.5rem solid #64a19d;
+            margin-bottom: 50px;
         }
     }
+
     @media (max-width: 640px) {
-       
+
         .projects-section .featured-text {
             padding: 0 0 0 2rem;
+            margin-bottom: 50px;
             border-left: 0.5rem solid #64a19d;
         }
     }
+
     @media (min-width: 992px) {
         .masthead {
             height: 100vh;
@@ -181,8 +242,13 @@
         }
 
         .masthead h2 {
-            max-width: 50rem;
-            font-size: 2.25rem;
+            /* max-width: 50rem; */
+            font-size: 3.25rem;
+        }
+        .projects-section .featured-text {
+            padding: 0 0 0 2rem;
+            margin-bottom: 50px;
+            border-left: 0.5rem solid #64a19d;
         }
     }
 
@@ -216,9 +282,9 @@
 
     .about-section {
         padding-top: 10rem;
-       
-        background: -webkit-gradient(linear, left top, left bottom, from(#FFEBED), color-stop(75%, rgba(222,218,204,  0.9)), to(rgba(222,218,204,  0.8)));
-        background: linear-gradient(to bottom, #FFEBED 0%, rgba(222,218,204,  0.9) 75%, rgba(222,218,204, 0.8) 100%);
+        min-height: 420px;
+        background: -webkit-gradient(linear, left top, left bottom, from(#FFEBED), color-stop(75%, rgba(222, 218, 204, 0.9)), to(rgba(222, 218, 204, 0.8)));
+        background: linear-gradient(to bottom, #FFEBED 0%, rgba(222, 218, 204, 0.9) 75%, rgba(222, 218, 204, 0.8) 100%);
     }
 
     .about-section p {
@@ -236,6 +302,7 @@
     @media (min-width: 992px) {
         .projects-section .featured-text {
             padding: 0 0 0 2rem;
+            margin-bottom: 50px
             border-left: 0.5rem solid #64a19d;
         }
     }
@@ -254,6 +321,7 @@
             border-color: #64a19d;
             border-width: .25rem;
             width: 30%;
+            margin-bottom: 50px
         }
     }
 
@@ -358,75 +426,162 @@
         margin-bottom: 0;
     }
 
-    
-.lead{
-    font-weight: 300;
-}
+
+    .lead {
+        font-weight: 300;
+    }
+
     .nav-link.js-scroll-trigger {
         background-color: transparent;
         border: none;
         /* color:rgba(255, 255, 255, 0.5); */
     }
-    ul, menu, dir {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
 
+    ul,
+    menu,
+    dir {
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+
+    }
+    #circle {
+	width: 100px;
+	height: 100px;
+	background: rgb(170, 135, 135);
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 }
-
+@-ms-keyframes spin {
+    from { -ms-transform: rotate(0deg); }
+    to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin {
+    from { -moz-transform: rotate(0deg); }
+    to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+.ct-btn-scroll {
+  width: 49px;
+  height: 49px;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 500px;
+  z-index: 9;
+  border-radius: 50%;
+  color: #161616;
+  -webkit-transition: background-color 0.25s ease-in-out;   
+  transition: background-color 0.25s ease-in-out;
+}
+#play{
+    margin-bottom: 50px;
+}
+div.row align-items-center no-gutters{
+    margin-bottom: 50px;
+}
+h4{
+    font-style: bold;
+    font-weight: 600
+}
 </style>
 
 <body id="page-top">
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="brand" id="homeIcon" href="/"><img src="https://i.imgur.com/7reqADe.png"></a>
-
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <button class="nav-link js-scroll-trigger">LOGIN</button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="nav-link js-scroll-trigger">SIGNUP</button>
-                    </li>
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-
+    <nav class="navbar navbar-inverse navbar-fixed-top mainmenu" role="navigation">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                  </button>
+                  <a class="brand" id="homeIcon" href="/"><img src="https://i.imgur.com/7reqADe.png"></a>
+              </div>
+  
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div id="navbarCollapse" class="collapse navbar-collapse">
+                  <ul class="nav navbar-nav dropdown" id="menu">
+  
+                          <li id="authorsindex"><a href="/Authors">Authors</a></li>
+                  </ul>
+  
+  
+                  <ul id="rightMenu" class="nav navbar-nav navbar-right">
+                                      <li id="logon"><a href="/Account/LogOn">LOGIN</a></li>
+                                      <li id="register"><a href="/Account/Register">SIGNUP</a></li>
+                   </ul>
+              </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
     <!-- Header -->
-    <header class="masthead">
-        <div class="container d-flex h-100 align-items-center">
-         
-            <div class="container" style="text-align:center;color:black;">
-                <h2 class=" mx-auto my-0 mt-2 mb-5">Baseball Knowledge and Coaching Platform.</h2>
-                <h5 class="lead">Your learning-buddy!</h5>
-                <p><a class="btn btn-lg btn-success" href="/SampleTest" role="button">Sample Activity</a></p>
-                <!-- <h3>Skill Mastery through Activities</h3> -->
+    <header class="masthead text-center">
+            <h2 class="text-center" style="color:#5e271b; vertical-align: middle">Baseball Knowledge and Coaching Platform.</h2>
+      <div class="container">
+          <br>
+          <br>
+            <div class="container" style="text-align:center;color:black;font-weight: 250">
+                <h5 class="lead text-center">Your learning-buddy!</h5>
+           
+                <!-- <p><a class="btn btn-lg btn-success text center" href="/SampleTest" role="button">Sample Activity</a></p> -->
+                <button id="circle" href="/SampleTest" role="button">Sample Activity</button>
             </div>
-            
-        </div>
+ </div>
+ <a class="ct-btn-scroll ct-js-btn-scroll" href="#about"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
     </header>
 
     <!-- About Section -->
-    <section id="about" class="about-section text-center">
+    <section id="about" class="about-section text-center">  
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mx-auto">
-                    <h2 class="text-black mb-4">Play. Evaluate. Compete.</h2>
-                    <p class="text-black-50"> What’s My Play is a one of a kind online, fun, dynamic, and interactive
+            <div class="col-xs-12 text-center">
+            
+                    <h2 class="text-black" id="play">Play. Evaluate. Compete.</h2>
+                    <p class="text-black-50"  style=" text-align: justify;"> What’s My Play is a one of a kind online, fun, dynamic, and interactive
                         learning platform that allows Coaches, Players, and Organizations to track and assess their
                         knowledge of live game situational play at any given point before, during or after a season. By
                         providing organizations and teams the ability to create knowledge tests for players and
                         coaches, they are better equipped to see and measure what their teams and players are learning.</p>
-                </div>
+                        
+                
             </div>
             <!-- <img src="img/ipad.png" class="img-fluid" alt=""> -->
         </div>
+        
     </section>
 
     <!-- Projects Section -->
@@ -434,8 +589,8 @@
         <div class="container">
 
             <!-- Featured Project Row -->
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-            
+            <div class="row align-items-center no-gutters ">
+
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="featured-text ">
                         <h4>What’s My Play allows players too:</h4>
@@ -452,36 +607,7 @@
 
             </div>
 
-            <!-- Project One Row -->
-            <!-- <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-              
-                <div class="col-lg-12">
-                    <div class="bg-black  h-100 project">
-                        <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto ">
-                                <h4 class="text-white">What’s My Play allows coaches too:</h4>
-                                <ul class="mb-0 text-white-50">
-                                    <li>Set up a Coach/Team account</li>
-                                    <li>Create and assign activities to an individual or entire team</li>
-                                    <li>Create their own content and activities based on their own individual coaching
-                                        philosophies</li>
-                                    <li>Receive instant feedback about their team or individual player performance</li>
-                                    <li>Differentiate assessments based on player or team experience level</li>
-                                    <li>Test other coaches as well as themselves</li>
-                                    <li>See where they rank amongst other coaches and teams</li>
-                                    <li>Send an email to <a href="mailto:shawn@whatsmyplay.com"> shawn@whatsmyplay.com</a>
-                                        for a Coach/Team account.</li>
-                                </ul>
-                          
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
-            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <!-- <div class="col-xl-8 col-lg-7">
-                    <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
-                </div> -->
+            <div class="row align-items-center no-gutters ">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="featured-text ">
                         <h4>What’s My Play allows coaches too:</h4>
@@ -508,24 +634,21 @@
         </div>
     </section>
     <!-- Footer -->
-    <footer class="bg-black small text-center ">
-        <div class="container">
-            <!-- Copyright &copy; Your Website 2018 -->
-            <ul class="footer-links">
-
-
-                <li><a class="small" href="/About" target="_blank">ABOUT US</a></li>
-                <li><a class="small" href="mailto:shawn@whatsmyplay.com" data-toggle="tooltip" data-placement="top"
-                        title="shawn@whatsmyplay.com">CONTACT US</a></li>
-                <li class="small text-muted">© 2018 What's My Play LLC.</li>
-                <li>
-                    <div class="fb-like" data-href="https://www.facebook.com/whatsmyplay" data-layout="button_count"
-                        data-action="like" data-show-faces="true" data-share="true"></div>
-                </li>
-            </ul>
-        </div>
-    </footer>
-
+   <footer class="footer" style="background-color:#2a2730;">
+            <div class="container">
+                <ul class="footer-links">
+                    
+                    
+                    <li><a class="small" href="/About" target="_blank">ABOUT US</a></li>
+                    <li><a class="small" href="mailto:shawn@whatsmyplay.com" data-toggle="tooltip" data-placement="top" title="shawn@whatsmyplay.com">CONTACT US</a></li>
+                    <li class="small text-muted">© 2018 What's My Play LLC.</li>
+                    <li>
+                        <div class="fb-like" data-href="https://www.facebook.com/whatsmyplay" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    <!-- Footer -->
 
     <!-- <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
     <script>
