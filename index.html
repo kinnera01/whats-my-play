@@ -169,23 +169,24 @@ body {
     }
 
     header.masthead {
-        position: relative;
-         max-width: 100%;
-         height: auto; 
-        min-height: 65rem;
-        padding: 15rem 0; 
-        text-align: center;
-        color: #fff;
-        background: -webkit-gradient(linear, left top, left bottom, from(rgba(222, 218, 204, 0.1)), color-stop(75%, rgba(222, 218, 204, 0.5)), to(#ffebcd)), url("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw");
-        background: linear-gradient(to bottom, rgba(222, 218, 204, 0.1) 0%, rgba(222, 218, 204, 0.5) 75%, #FFEBED 100%),
+         position: relative;
+         height:auto;
+          width: 100%;
+          /* background-size: cover;  */
+        /* min-height:75rem;  */
+        padding: 15rem 0;  
+          color: #fff;
+        /* background-image: URL("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw"); */
+        background: -webkit-gradient(linear, left top, left bottom, from( rgba(222, 218, 204, 0.7)) color-stop(75%, rgba(222, 218, 204, 0.5)), to(#ffebcd)), url("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw"); 
+         background: linear-gradient(to bottom, rgba(222, 218, 204, 0.1) 0%, rgba(222, 218, 204, 0.5) 75%, #FFEBED 100%),
             url("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw");
-        background-repeat: no-repeat;
+         background-repeat: no-repeat;
         background-attachment: scroll;
-        background-position: center center;
-        -webkit-background-size: cover;
+         background-position: center ;
+       -webkit-background-size: cover;
         -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+        -o-background-size: cover; 
+       
        
     }
 
@@ -197,11 +198,6 @@ body {
         font-weight: bold;
     }
 
-    @media (min-width: 991px) {
-        header.masthead{
-            min-height: 65rem;  
-        }
-}
     @media (max-width: 991px) {
         header.masthead{
             min-height: 65rem;  
@@ -288,7 +284,7 @@ body {
         padding-top: 10rem;
         min-height: 420px;
         background: -webkit-gradient(linear, left top, left bottom, from(#FFEBED), color-stop(75%, rgba(222, 218, 204, 0.9)), to(rgba(222, 218, 204, 0.8)));
-        background: linear-gradient(to bottom, #FFEBED 0%, rgba(222, 218, 204, 0.9) 75%, rgba(222, 218, 204, 0.8) 100%);
+        background: linear-gradient(to bottom, #FFEBED 25%, rgba(222, 218, 204, 0.9) 75%, rgba(222, 218, 204, 0.8) 100%);
     }
 
     .about-section p {
@@ -451,51 +447,8 @@ body {
         margin-inline-start: 0px;
 
     }
-    #mastheadbtn {
-	/* width: 100px;
-	height: 100px;
-	background: rgb(170, 135, 135);
-	-moz-border-radius: 50px;
-	-webkit-border-radius: 50px;
-	border-radius: 50px; */
-    /* -webkit-animation-name: spin;
-    -webkit-animation-duration: 4000ms;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-name: spin;
-    -moz-animation-duration: 4000ms;
-    -moz-animation-iteration-count: infinite;
-    -moz-animation-timing-function: linear;
-    -ms-animation-name: spin;
-    -ms-animation-duration: 4000ms;
-    -ms-animation-iteration-count: infinite;
-    -ms-animation-timing-function: linear;
-    
-    animation-name: spin;
-    animation-duration: 4000ms;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-@-ms-keyframes spin {
-    from { -ms-transform: rotate(0deg); }
-    to { -ms-transform: rotate(360deg); }
-}
-@-moz-keyframes spin {
-    from { -moz-transform: rotate(0deg); }
-    to { -moz-transform: rotate(360deg); }
-}
-@-webkit-keyframes spin {
-    from { -webkit-transform: rotate(0deg); }
-    to { -webkit-transform: rotate(360deg); }
-}
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    } */
-}
+
+
 .ct-btn-scroll {
   width: 49px;
   height: 49px;
@@ -521,33 +474,30 @@ h4{
     font-style: bold;
     font-weight: 600
 }
-#mastheadbtn{
-margin-top:140px
-}
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
     #mastheadbtn{
 margin-top:50px
-}
+} */
 
 /* Portrait and Landscape */
 @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
-    #mastheadbtn{
-margin-top:200px
-}
+ header.masthead{
+            min-height: 85rem;  
+        }
 }
 
-}
+
 @media screen 
   and (min-device-width: 1200px) 
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
-    #mastheadbtn{
-margin-top:200px
-}
-}
+    header.masthead{
+            min-height: 85rem;  
+        }
+} 
 
 </style>
 
@@ -585,7 +535,6 @@ margin-top:200px
     <header class="masthead text-center">
         <h2 class="text-center" style="color:#f8e8e6; vertical-align: middle">Baseball Knowledge and Coaching Platform.</h2>
         <div class="container">
-
             <div class="container" style="text-align:center;color:black;font-weight:250">
 
     <a class="btn btn-lg btn-success text center" id="mastheadbtn" href="/SampleTest" role="button">Sample
