@@ -19,400 +19,409 @@
 </head>
 <style>
     #mainNav {
-  min-height: 56px;
-  background-color: #fff;
+        min-height: 56px;
+        background-color: #fff;
+    }
+
+    #mainNav .navbar-toggler {
+        font-size: 80%;
+        padding: 0.75rem;
+        color: #64a19d;
+        border: 1px solid #64a19d;
+    }
+
+    #mainNav .navbar-toggler:focus {
+        outline: none;
+    }
+
+    #mainNav .navbar-brand {
+        color: #161616;
+        font-weight: 700;
+        padding: .9rem 0;
+    }
+
+    #mainNav .navbar-nav .nav-item:hover {
+        color: fade(white, 80%);
+        outline: none;
+        background-color: transparent;
+    }
+
+    #mainNav .navbar-nav .nav-item:active,
+    #mainNav .navbar-nav .nav-item:focus {
+        outline: none;
+        background-color: transparent;
+    }
+
+    @media (min-width: 992px) {
+        #mainNav {
+            padding-top: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+            background-color: transparent;
+            -webkit-transition: background-color 0.3s ease-in-out;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #mainNav .navbar-brand {
+            padding: .5rem 0;
+            color: rgba(255, 255, 255, 0.5);
+
+        }
+
+        #mainNav .nav-link {
+            -webkit-transition: none;
+            transition: none;
+            padding: 2rem 1.5rem;
+            color: rgba(255, 255, 255, 0.5);
+
+        }
+
+        #mainNav .nav-link:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        #mainNav .nav-link:active {
+            color: white;
+        }
+
+        #mainNav.navbar-shrink {
+            background-color: #fff;
+        }
+
+        #mainNav.navbar-shrink .navbar-brand {
+            /* color: #161616; */
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        #mainNav.navbar-shrink .nav-link {
+            /* color: #161616; */
+            color: rgba(255, 255, 255, 0.75);
+            padding: 1.5rem 1.5rem 1.25rem;
+            border-bottom: 0.25rem solid transparent;
+        }
+
+        #mainNav.navbar-shrink .nav-link:hover {
+            color: #64a19d;
+        }
+
+        #mainNav.navbar-shrink .nav-link:active {
+            color: #467370;
+        }
+
+        #mainNav.navbar-shrink .nav-link.active {
+            color: #64a19d;
+            outline: none;
+            border-bottom: 0.25rem solid #64a19d;
+        }
+    }
+
+    header.masthead {
+         position: relative;
+        max-width: 100%;
+        height: auto;
+         min-height: 35rem;
+        padding: 15rem 0; 
+        text-align: center;
+        color: #fff;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(222,218,204, 0.1)), color-stop(75%, rgba(222,218,204,  0.5)), to(#ffebcd )), url("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw");
+        background: linear-gradient(to bottom, rgba(222,218,204,  0.1) 0%, rgba(222,218,204,  0.5) 75%, #FFEBED  100%),
+            url("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: center center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover
+    }
+
+    .masthead h1 {
+        font-family: 'Varela Round';
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.8rem;
+        background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    .masthead h2 {
+        max-width: 20rem;
+        font-size: 1rem;
+    }
+
+    @media (max-width: 991px) {
+        .masthead h1 {
+            font-size: 4rem;
+            line-height: 4rem;
+        }
+        .projects-section .featured-text {
+            padding: 0 0 0 2rem;
+            border-left: 0.5rem solid #64a19d;
+        }
+    }
+    @media (max-width: 640px) {
+       
+        .projects-section .featured-text {
+            padding: 0 0 0 2rem;
+            border-left: 0.5rem solid #64a19d;
+        }
+    }
+    @media (min-width: 992px) {
+        .masthead {
+            height: 100vh;
+            padding: 0;
+        }
+
+        .masthead h1 {
+            font-size: 6.5rem;
+            line-height: 6.5rem;
+            letter-spacing: 0.8rem;
+        }
+
+        .masthead h2 {
+            max-width: 50rem;
+            font-size: 2.25rem;
+        }
+    }
+
+    .btn {
+        -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+        padding: 1.25rem 2rem;
+        font-family: 'Varela Round';
+        font-size: 80%;
+        text-transform: uppercase;
+        letter-spacing: .15rem;
+        border: 0;
+    }
+
+    .btn-primary {
+        background-color: #64a19d;
+    }
+
+    .btn-primary:hover {
+        background-color: #4f837f;
+    }
+
+    .btn-primary:focus {
+        background-color: #4f837f;
+        color: white;
+    }
+
+    .btn-primary:active {
+        background-color: #467370 !important;
+    }
+
+    .about-section {
+        padding-top: 10rem;
+       
+        background: -webkit-gradient(linear, left top, left bottom, from(#FFEBED), color-stop(75%, rgba(222,218,204,  0.9)), to(rgba(222,218,204,  0.8)));
+        background: linear-gradient(to bottom, #FFEBED 0%, rgba(222,218,204,  0.9) 75%, rgba(222,218,204, 0.8) 100%);
+    }
+
+    .about-section p {
+        margin-bottom: 5rem;
+    }
+
+    .projects-section {
+        padding: 5rem 0;
+    }
+
+    .projects-section .featured-text {
+        padding: 2rem;
+    }
+
+    @media (min-width: 992px) {
+        .projects-section .featured-text {
+            padding: 0 0 0 2rem;
+            border-left: 0.5rem solid #64a19d;
+        }
+    }
+
+    .projects-section .project-text {
+        padding: 3rem;
+        font-size: 90%;
+    }
+
+    @media (min-width: 992px) {
+        .projects-section .project-text {
+            padding: 5rem;
+        }
+
+        .projects-section .project-text hr {
+            border-color: #64a19d;
+            border-width: .25rem;
+            width: 30%;
+        }
+    }
+
+    .signup-section {
+        padding: 10rem 0;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
+        background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
+    .signup-section .form-inline input {
+        -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+        box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+        padding: 1.25rem 2rem;
+        height: auto;
+        font-family: 'Varela Round';
+        font-size: 80%;
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+        border: 0;
+    }
+
+    .contact-section {
+        padding: 5rem 0 0;
+    }
+
+    .contact-section .card {
+        border: 0;
+        border-bottom: 0.25rem solid #64a19d;
+    }
+
+    .contact-section .card h4 {
+        font-size: 0.8rem;
+        font-family: 'Varela Round';
+        text-transform: uppercase;
+        letter-spacing: 0.15rem;
+    }
+
+    .contact-section .card hr {
+        border-color: #64a19d;
+        border-width: 0.25rem;
+        width: 3rem;
+    }
+
+    .contact-section .social {
+        margin-top: 5rem;
+    }
+
+    .contact-section .social a {
+        text-align: center;
+        height: 3rem;
+        width: 3rem;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 100%;
+        line-height: 3rem;
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .contact-section .social a:hover {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .contact-section .social a:active {
+        color: #fff;
+    }
+
+    body {
+        font-family: 'Nunito';
+        letter-spacing: 0.0625em;
+    }
+
+    a {
+        color: #64a19d;
+    }
+
+    a:focus,
+    a:hover {
+        text-decoration: none;
+        color: #3c6360;
+    }
+
+    .bg-black {
+        background-color: #161616 !important;
+    }
+
+    .bg-primary {
+        background-color: #64a19d !important;
+    }
+
+    .text-primary {
+        color: #64a19d !important;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: #f5f5f5;
+        margin-bottom: 0;
+    }
+
+    .jumbotron {
+        color: #050401 !important
+    }
+
+    .nav-link.js-scroll-trigger {
+        background-color: transparent;
+        border: none;
+        /* color:rgba(255, 255, 255, 0.5); */
+    }
+    ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+
 }
 
-#mainNav .navbar-toggler {
-  font-size: 80%;
-  padding: 0.75rem;
-  color: #64a19d;
-  border: 1px solid #64a19d;
-}
-
-#mainNav .navbar-toggler:focus {
-  outline: none;
-}
-
-#mainNav .navbar-brand {
-  color: #161616;
-  font-weight: 700;
-  padding: .9rem 0;
-}
-
-#mainNav .navbar-nav .nav-item:hover {
-  color: fade(white, 80%);
-  outline: none;
-  background-color: transparent;
-}
-
-#mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
-  outline: none;
-  background-color: transparent;
-}
-
-@media (min-width: 992px) {
-  #mainNav {
-    padding-top: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-    background-color: transparent;
-    -webkit-transition: background-color 0.3s ease-in-out;
-    transition: background-color 0.3s ease-in-out;
-  }
-  #mainNav .navbar-brand {
-    padding: .5rem 0;
-  color: rgba(255, 255, 255, 0.5);
-   
-  }
-  #mainNav .nav-link {
-    -webkit-transition: none;
-    transition: none;
-    padding: 2rem 1.5rem;
-     color: rgba(255, 255, 255, 0.5); 
-    
-  }
-  #mainNav .nav-link:hover {
-    color: rgba(255, 255, 255, 0.75);
-  }
-  #mainNav .nav-link:active {
-    color: white;
-  }
-  #mainNav.navbar-shrink {
-    background-color: #fff;
-  }
-  #mainNav.navbar-shrink .navbar-brand {
-    color: #161616;
-  }
-  #mainNav.navbar-shrink .nav-link {
-    color: #161616;
-    padding: 1.5rem 1.5rem 1.25rem;
-    border-bottom: 0.25rem solid transparent;
-  }
-  #mainNav.navbar-shrink .nav-link:hover {
-    color: #64a19d;
-  }
-  #mainNav.navbar-shrink .nav-link:active {
-    color: #467370;
-  }
-  #mainNav.navbar-shrink .nav-link.active {
-    color: #64a19d;
-    outline: none;
-    border-bottom: 0.25rem solid #64a19d;
-  }
-}
-
-.masthead {
-  position: relative;
-  width: 100%;
-  height: auto;
-  min-height: 35rem;
-  padding: 15rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("https://i.imgur.com/JiAoICF.png");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("https://i.imgur.com/JiAoICF.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-}
-
-.masthead h1 {
-  font-family: 'Varela Round';
-  font-size: 2.5rem;
-  line-height: 2.5rem;
-  letter-spacing: 0.8rem;
-  background: -webkit-linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-}
-
-.masthead h2 {
-  max-width: 20rem;
-  font-size: 1rem;
-}
-
-@media (min-width: 768px) {
-  .masthead h1 {
-    font-size: 4rem;
-    line-height: 4rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .masthead {
-    height: 100vh;
-    padding: 0;
-  }
-  .masthead h1 {
-    font-size: 6.5rem;
-    line-height: 6.5rem;
-    letter-spacing: 0.8rem;
-  }
-  .masthead h2 {
-    max-width: 50rem;
-    font-size: 2.25rem;
-  }
-}
-
-.btn {
-  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
-  font-family: 'Varela Round';
-  font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: .15rem;
-  border: 0;
-}
-
-.btn-primary {
-  background-color: #64a19d;
-}
-
-.btn-primary:hover {
-  background-color: #4f837f;
-}
-
-.btn-primary:focus {
-  background-color: #4f837f;
-  color: white;
-}
-
-.btn-primary:active {
-  background-color: #467370 !important;
-}
-
-.about-section {
-  padding-top: 10rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(#161616), color-stop(75%, rgba(22, 22, 22, 0.9)), to(rgba(22, 22, 22, 0.8)));
-  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
-}
-
-.about-section p {
-  margin-bottom: 5rem;
-}
-
-.projects-section {
-  padding: 5rem 0;
-}
-
-.projects-section .featured-text {
-  padding: 2rem;
-}
-
-@media (min-width: 992px) { 
-  .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #64a19d;
-  }
-}
-
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
-}
-
-@media (min-width: 992px) {
-  .projects-section .project-text {
-    padding: 5rem;
-  }
-  .projects-section .project-text hr {
-    border-color: #64a19d;
-    border-width: .25rem;
-    width: 30%;
-  }
-}
-
-.signup-section {
-  padding: 10rem 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(22, 22, 22, 0.1)), color-stop(75%, rgba(22, 22, 22, 0.5)), to(#161616)), url("../img/bg-signup.jpg");
-  background: linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 0%, rgba(22, 22, 22, 0.5) 75%, #161616 100%), url("../img/bg-signup.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-size: cover;
-}
-
-.signup-section .form-inline input {
-  -webkit-box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
-  padding: 1.25rem 2rem;
-  height: auto;
-  font-family: 'Varela Round';
-  font-size: 80%;
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-  border: 0;
-}
-
-.contact-section {
-  padding: 5rem 0 0;
-}
-
-.contact-section .card {
-  border: 0;
-  border-bottom: 0.25rem solid #64a19d;
-}
-
-.contact-section .card h4 {
-  font-size: 0.8rem;
-  font-family: 'Varela Round';
-  text-transform: uppercase;
-  letter-spacing: 0.15rem;
-}
-
-.contact-section .card hr {
-  border-color: #64a19d;
-  border-width: 0.25rem;
-  width: 3rem;
-}
-
-.contact-section .social {
-  margin-top: 5rem;
-}
-
-.contact-section .social a {
-  text-align: center;
-  height: 3rem;
-  width: 3rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 100%;
-  line-height: 3rem;
-  color: rgba(255, 255, 255, 0.3);
-}
-
-.contact-section .social a:hover {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.contact-section .social a:active {
-  color: #fff;
-}
-
-body {
-  font-family: 'Nunito';
-  letter-spacing: 0.0625em;
-}
-
-a {
-  color: #64a19d;
-}
-
-a:focus, a:hover {
-  text-decoration: none;
-  color: #3c6360;
-}
-
-.bg-black {
-  background-color: #161616 !important;
-}
-
-.bg-primary {
-  background-color: #64a19d !important;
-}
-
-.text-primary {
-  color: #64a19d !important;
-}
-
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #f5f5f5;
-    margin-bottom: 0;
-}
-.jumbotron{
-    color:#050401!important
-}
-.nav-link.js-scroll-trigger{
-    background-color: transparent;
-    border: none;
-    /* color:rgba(255, 255, 255, 0.5); */
-}
 </style>
 
 <body id="page-top">
-
     <!-- Navigation -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Start Bootstrap</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                Menu
-                <i class="fas fa-bars"></i>
-            </button>
+            <a class="brand" id="homeIcon" href="/"><img src="https://i.imgur.com/7reqADe.png"></a>
+
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                        <button class="nav-link js-scroll-trigger">LOGIN</button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+                        <button class="nav-link js-scroll-trigger">SIGNUP</button>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
-                    </li>
-                </ul> 
+
+                </ul>
             </div>
         </div>
-    </nav> -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-            <div class="container">
-                    <a class="navbar-brand js-scroll-trigger" id="homeIcon" href="/"><img src="https://i.imgur.com/7reqADe.png">Author</a>
-                    <!-- <a class="navbar-brand js-scroll-trigger" href="#page-top">Author</a> -->
-                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-                        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        Menu
-                        <i class="fas fa-bars"></i>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarResponsive">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item">
-                                    <!-- <a class="nav-link js-scroll-trigger" href="#about">About</a> -->
-                                    <button class="nav-link js-scroll-trigger">LOGIN</button>
-                                </li>
-                                <li class="nav-item">
-                                        <button class="nav-link js-scroll-trigger">SIGNUP</button>
-                                </li>
-                              
-                            </ul> 
-                        </div>
-            </div>
-          </nav>
+    </nav>
 
     <!-- Header -->
     <header class="masthead">
         <div class="container d-flex h-100 align-items-center">
-            <!-- <div class="mx-auto text-center">
-                 <h1 class="mx-auto my-0 text-uppercase">Baseball Knowledge and Coaching platform</h1>
-                      <h2 class="text-white-50 mx-auto mt-2 mb-5">Your learning-buddy!</h2>
-                      <a href="#about" class="btn btn-primary js-scroll-trigger">Get Started</a> 
-                <title class="mx-auto my-0 text-uppercase">Baseball Knowledge and Coaching platform</title>
-                <h2>Baseball Knowledge and Coaching Platform.</h2>
-                <p class="lead">Your learning-buddy!</p>
+         
+            <div class="container" style="text-align:center">
+                <h2 class=" mx-auto my-0 mt-2 mb-5">Baseball Knowledge and Coaching Platform.</h2>
+                <h6 class="lead">Your learning-buddy!</h6>
                 <p><a class="btn btn-lg btn-success" href="/SampleTest" role="button">Try Sample Activity</a></p>
                 <h3>Skill Mastery through Activities</h3>
-            </div> -->
-            <div class="jumbotron" style="text-align:center;width:100%;background:rgba(204, 204, 204, 0.5);">
-    <div class="container">
-        <h2 class=" mx-auto my-0 mt-2 mb-5">Baseball Knowledge and Coaching Platform.</h2>
-        <h6 class="lead">Your learning-buddy!</h6>
-        <p><a class="btn btn-lg btn-success" href="/SampleTest" role="button">Try Sample Activity</a></p>
-        <h3>Skill Mastery through Activities</h3>
-    </div>
-</div>
-        </div>  
+            </div>
+            
+        </div>
     </header>
 
     <!-- About Section -->
     <section id="about" class="about-section text-center">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-white mb-4">Play. Evaluate. Compete.</h2>
-                    <p class="text-white-50"> What’s My Play is a one of a kind online, fun, dynamic, and interactive learning platform that allows Coaches, Players, and Organizations to track and assess their knowledge of live game situational play at any given point before, during or after a season.  By providing organizations and teams the ability to create knowledge tests for players and coaches, they are better equipped to see and measure what their teams and players are learning.</p>
+                <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12 mx-auto">
+                    <h2 class="text-black mb-4">Play. Evaluate. Compete.</h2>
+                    <p class="text-black-50"> What’s My Play is a one of a kind online, fun, dynamic, and interactive
+                        learning platform that allows Coaches, Players, and Organizations to track and assess their
+                        knowledge of live game situational play at any given point before, during or after a season. By
+                        providing organizations and teams the ability to create knowledge tests for players and
+                        coaches, they are better equipped to see and measure what their teams and players are learning.</p>
                 </div>
             </div>
             <!-- <img src="img/ipad.png" class="img-fluid" alt=""> -->
@@ -425,55 +434,74 @@ a:focus, a:hover {
 
             <!-- Featured Project Row -->
             <div class="row align-items-center no-gutters mb-4 mb-lg-5">
-                <!-- <div class="col-xl-8 col-lg-7">
-                    <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
-                </div> -->
-                <div class="col-xl-6 col-lg-8">
-                    <div class="featured-text text-center text-lg-left">
+            
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="featured-text ">
                         <h4>What’s My Play allows players too:</h4>
-                        <!-- <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use
-                            it for any project - even commercial projects! Download it, customize it, and publish your
-                            website!</p> -->
-                            <ul class="text-black-50 mb-0">
-                                    <li>Set up an individual account</li>
-                                    <li>Test their current situational knowledge</li>
-                                    <li>Test their positional responsibility knowledg</li>
-                                    <li>See where they rank among their peers</li>
-                                    <li>Track progress to see areas in which they may need to improve upon</li>
-                                    <li>Challenge other players and compete against them</li>
-                                </ul>
+                        <ul class="text-black-50 mb-0">
+                            <li>Set up an individual account</li>
+                            <li>Test their current situational knowledge</li>
+                            <li>Test their positional responsibility knowledg</li>
+                            <li>See where they rank among their peers</li>
+                            <li>Track progress to see areas in which they may need to improve upon</li>
+                            <li>Challenge other players and compete against them</li>
+                        </ul>
                     </div>
                 </div>
-                
+
             </div>
 
             <!-- Project One Row -->
-            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-                <!-- <div class="col-lg-6">
-                    <img class="img-fluid" src="img/demo-image-01.jpg" alt="">
-                </div> -->
+            <!-- <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+              
                 <div class="col-lg-12">
-                    <div class="bg-black text-center h-100 project">
+                    <div class="bg-black  h-100 project">
                         <div class="d-flex h-100">
-                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                            <div class="project-text w-100 my-auto ">
                                 <h4 class="text-white">What’s My Play allows coaches too:</h4>
                                 <ul class="mb-0 text-white-50">
-                                        <li>Set up a Coach/Team account</li>
-                                        <li>Create and assign activities to an individual or entire team</li>
-                                        <li>Create their own content and activities based on their own individual coaching philosophies</li>
-                                        <li>Receive instant feedback about their team or individual player performance</li>
-                                        <li>Differentiate assessments based on player or team experience level</li>
-                                        <li>Test other coaches as well as themselves</li>
-                                        <li>See where they rank amongst other coaches and teams</li>
-                                        <li>Send an email to <a href="mailto:shawn@whatsmyplay.com"> shawn@whatsmyplay.com</a> for a Coach/Team account.</li>
-                                    </ul>
-                                <!-- <p class="mb-0 text-white-50">An example of where you can put an image of a project, or
-                                    anything else, along with a description.</p> -->
-                                <!-- <hr class="d-none d-lg-block mb-0 ml-0"> -->
+                                    <li>Set up a Coach/Team account</li>
+                                    <li>Create and assign activities to an individual or entire team</li>
+                                    <li>Create their own content and activities based on their own individual coaching
+                                        philosophies</li>
+                                    <li>Receive instant feedback about their team or individual player performance</li>
+                                    <li>Differentiate assessments based on player or team experience level</li>
+                                    <li>Test other coaches as well as themselves</li>
+                                    <li>See where they rank amongst other coaches and teams</li>
+                                    <li>Send an email to <a href="mailto:shawn@whatsmyplay.com"> shawn@whatsmyplay.com</a>
+                                        for a Coach/Team account.</li>
+                                </ul>
+                          
                             </div>
                         </div>
                     </div>
                 </div>
+            </div> -->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <!-- <div class="col-xl-8 col-lg-7">
+                    <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
+                </div> -->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="featured-text ">
+                        <h4>What’s My Play allows coaches too:</h4>
+                        <!-- <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use
+                            it for any project - even commercial projects! Download it, customize it, and publish your
+                            website!</p> -->
+                        <ul class="text-black-50 mb-0">
+                            <li>Set up a Coach/Team account</li>
+                            <li>Create and assign activities to an individual or entire team</li>
+                            <li>Create their own content and activities based on their own individual coaching
+                                philosophies</li>
+                            <li>Receive instant feedback about their team or individual player performance</li>
+                            <li>Differentiate assessments based on player or team experience level</li>
+                            <li>Test other coaches as well as themselves</li>
+                            <li>See where they rank amongst other coaches and teams</li>
+                            <li>Send an email to <a href="mailto:shawn@whatsmyplay.com"> shawn@whatsmyplay.com</a>
+                                for a Coach/Team account.</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -483,15 +511,17 @@ a:focus, a:hover {
         <div class="container">
             <!-- Copyright &copy; Your Website 2018 -->
             <ul class="footer-links">
-                    
-                    
-                    <li><a class="small" href="/About" target="_blank">ABOUT US</a></li>
-                    <li><a class="small" href="mailto:shawn@whatsmyplay.com" data-toggle="tooltip" data-placement="top" title="shawn@whatsmyplay.com">CONTACT US</a></li>
-                    <li class="small text-muted">© 2018 What's My Play LLC.</li>
-                    <li>
-                        <div class="fb-like" data-href="https://www.facebook.com/whatsmyplay" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-                    </li>
-                </ul>
+
+
+                <li><a class="small" href="/About" target="_blank">ABOUT US</a></li>
+                <li><a class="small" href="mailto:shawn@whatsmyplay.com" data-toggle="tooltip" data-placement="top"
+                        title="shawn@whatsmyplay.com">CONTACT US</a></li>
+                <li class="small text-muted">© 2018 What's My Play LLC.</li>
+                <li>
+                    <div class="fb-like" data-href="https://www.facebook.com/whatsmyplay" data-layout="button_count"
+                        data-action="like" data-show-faces="true" data-share="true"></div>
+                </li>
+            </ul>
         </div>
     </footer>
 
