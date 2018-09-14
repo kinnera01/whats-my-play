@@ -451,14 +451,14 @@ body {
         margin-inline-start: 0px;
 
     }
-    #circle {
+    #mastheadbtn {
 	width: 100px;
 	height: 100px;
 	background: rgb(170, 135, 135);
 	-moz-border-radius: 50px;
 	-webkit-border-radius: 50px;
 	border-radius: 50px;
-    -webkit-animation-name: spin;
+    /* -webkit-animation-name: spin;
     -webkit-animation-duration: 4000ms;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
@@ -494,7 +494,7 @@ body {
     }
     to {
         transform:rotate(360deg);
-    }
+    } */
 }
 .ct-btn-scroll {
   width: 49px;
@@ -522,11 +522,30 @@ h4{
     font-weight: 600
 }
 #mastheadbtn{
-margin-top:150px
+margin-top:140px
 }
 @media (max-width: 640px) {
     #mastheadbtn{
 margin-top:50px
+}
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    #mastheadbtn{
+margin-top:200px
+}
+}
+
+}
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) { 
+    #mastheadbtn{
+margin-top:200px
 }
 }
 
@@ -569,9 +588,9 @@ margin-top:50px
 
             <div class="container" style="text-align:center;color:black;font-weight:250">
 
-                <a class="btn btn-lg btn-success text center" id="mastheadbtn" href="/SampleTest" role="button">Sample
-                    Activity</a>
-                <!-- <button id="circle" href="/SampleTest" role="button">Sample Activity</button> -->
+                <!-- <a class="btn btn-lg btn-success text center" id="mastheadbtn" href="/SampleTest" role="button">Sample
+                    Activity</a> -->
+                <button id="mastheadbtn" href="/SampleTest" role="button">Sample Activity</button>
             </div>
         </div>
         <a class="ct-btn-scroll ct-js-btn-scroll" href="#about"><img alt="Arrow Down Icon" src="https://www.solodev.com/assets/anchor/arrow-down.png"></a>
