@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -170,10 +171,8 @@ body {
 
     header.masthead {
          position: relative;
-         height:auto;
           width: 100%;
-          /* background-size: cover;  */
-        /* min-height:75rem;  */
+          background-size: cover;      
         padding: 15rem 0;  
           color: #fff;
         /* background-image: URL("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw"); */
@@ -181,8 +180,8 @@ body {
          background: linear-gradient(to bottom, rgba(222, 218, 204, 0.1) 0%, rgba(222, 218, 204, 0.5) 75%, #FFEBED 100%),
             url("https://lh4.googleusercontent.com/Yyncxgvpachpi_rDrd5NcHRzijkYhM4fH7Fu6R-c_MkRLt8Y8GFHReT0T-c4fuYQH6fDEbI1FO3rWdh9TCxgio772My8V6HMVb582JoN3dNw0oL3droaPxluOo9h_iXmUe449ZXw");
          background-repeat: no-repeat;
-        background-attachment: scroll;
-         background-position: center ;
+        /* background-attachment: scroll; */
+         background-position: center center ;
        -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover; 
@@ -231,7 +230,7 @@ body {
 
     @media (min-width: 992px) {
         .masthead {
-            height: 100vh;
+            min-height:75rem;
             padding: 0;
         }
 
@@ -484,20 +483,31 @@ margin-top:50px
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
   and (-webkit-min-device-pixel-ratio: 1) {
- header.masthead{
+ /* header.masthead{
             min-height: 85rem;  
-        }
+        } */
 }
 
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+ { 
+    .masthead h2 {
+ 
+    margin-top: -40px!important;
 
+}
+}
 @media screen 
-  and (min-device-width: 1200px) 
-  and (max-device-width: 1600px) 
-  and (-webkit-min-device-pixel-ratio: 1) { 
-    header.masthead{
-            min-height: 85rem;  
-        }
-} 
+  and (min-device-width: 320px) 
+  and (max-device-height: 640px) 
+ {
+    .masthead h2 {
+ margin-top: -50px!important;
+
+}
+}
+
 
 </style>
 
